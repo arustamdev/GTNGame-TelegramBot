@@ -13,7 +13,7 @@ bot.on('message', (msg) => {
   if (msg.text === '/start') {
     bot.sendMessage(chatId, 'Click below button to play!', {
       reply_markup: {
-        inline_keyboard: [[{ text: 'Open Game', web_app: { url: 'https://www.google.com' } }]],
+        inline_keyboard: [[{ text: 'Open Game', web_app: { url: process.env.FRONTEND_URL! } }]],
       },
     });
   }
